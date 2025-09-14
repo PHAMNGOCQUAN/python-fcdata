@@ -71,8 +71,6 @@ class WebsocketTransport(BaseTransport):
 
         self.state = ConnectionState.connecting
         self.logger.debug("start url:" + self.url)
-        print(self.url)
-        print(self.headers)
         self._ws = websocket.WebSocketApp(
             self.url,
             header=self.headers,
